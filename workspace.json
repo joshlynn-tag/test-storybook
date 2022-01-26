@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "card": "libs/card",
+    "card-e2e": "apps/card-e2e"
+  }
 }

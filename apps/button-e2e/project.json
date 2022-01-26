@@ -1,0 +1,28 @@
+{
+  "root": "apps/button-e2e",
+  "sourceRoot": "apps/button-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/button-e2e/cypress.json",
+        "devServerTarget": "button:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "button:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/button-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["button"]
+}
